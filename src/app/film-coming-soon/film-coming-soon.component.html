@@ -1,0 +1,8 @@
+<mat-grid-list cols="5" rowHeight=550 px>
+    <div *ngFor="let movie of ComingSoonMovies; let i = index">
+      <mat-grid-tile *ngIf=" i < getNombre ">
+        <app-film-ihm id={{movie.id}}></app-film-ihm>
+      </mat-grid-tile>
+    </div>
+  </mat-grid-list>
+  

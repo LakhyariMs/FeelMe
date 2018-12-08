@@ -1,0 +1,38 @@
+<mat-spinner *ngIf="showspinner"></mat-spinner>
+
+
+<div class="row">
+  <div class="example-1 card" *ngIf="movie">
+      <div class="wrapper">
+      <div class="data">
+        <div class="content">
+          <h1 class="title"><a href="#">{{MovieName}}</a></h1>
+          <p class="text">{{MovieOverView}}</p>
+          <label  class="menu-button" [matMenuTriggerFor]="menu" ><span></span></label>
+        </div>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="listExist">Listes qui existent deja</button>
+          <button mat-menu-item [matMenuTriggerFor]="AddList">Ajouter une Liste</button>
+        </mat-menu>
+
+        <mat-menu #listExist="matMenu">
+          <div *ngFor="let listName of getListName" #addHere>
+            <button mat-menu-item (click)="addToList(listName.$key)" > {{ listName.content}}  </button>
+          </div>
+        </mat-menu>
+
+        <mat-menu #AddList="matMenu">
+          <mat-form-field>
+            <input matInput placeholder="Input">
+          </mat-form-field>
+        </mat-menu>
+
+      </div>
+      <div>
+        <a [routerLink]="['/informationFilm' , movie.id]" routerLinkActive="active" (click)="refresh()">
+          <img class="poster" [src]="getPath(movie.poster_path)" alt="Movie poster" />
+        </a>
+      </div>
+    </div>
+    <button *ngIf="inlist" type="button" class="btn btn-danger" style="width:180%; text-align: center ;">Supprimer</button>
+  </div>

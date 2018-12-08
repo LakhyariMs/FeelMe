@@ -1,0 +1,26 @@
+<mat-toolbar>
+  <a class="addBtn" (click)="Retour()"><img style="width: 30px;height: 30px;" src="assets/images/retourr.jpg">
+  </a>
+  <span style=" margin-left: 80px;margin-right: 50px;position:absolute;top:70 px;">{{getListName}}</span>
+
+  <span class="example-spacer"></span>
+  <span class="example-icon">
+  </span>
+  <a class="addBtn" (click)="openremoveFileDialog()"><img style="width: 30px;height: 30px;  right: 0px;top:75px;position:absolute;"
+      src="assets/images/supp.png">
+  </a>
+
+
+  <a class="addBtn" (click)="openAddFileDialog()"><img style="width: 30px;height: 30px;  right: 50px;top:75px;position:absolute;"
+      src="assets/images/upp.png">
+  </a>
+</mat-toolbar>
+
+
+<mat-grid-list cols="5" rowHeight=550 px>
+  <div *ngFor="let list of getlistMovies ">
+    <mat-grid-tile>
+      <app-film-ihm id={{list.id}} inlist=true></app-film-ihm>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>

@@ -1,0 +1,15 @@
+<h3>
+  <div style=" text-align: center; margin-right: 20px; text-align: center; font-variant-caps: Arial;color: black;">Modifier
+    le nom de votre liste :
+  </div>
+</h3>
+<br>
+<input type="text" class="form-control" [(ngModel)]="data.listeName">
+<br>
+<div style="text-align: center; margin : 10px 0;">
+  <!-- <button [mat-dialog-close]="data.listeName" cdkFocusInitial class="button button1">Confirmer</button> -->
+  <button [mat-dialog-close]="data.listeName" cdkFocusInitial class="btn btn-success">Confirmer</button>
+  <!-- <button (click)="close()" class="button button1">Annuler</button> -->
+  <button type="button" (click)="close()" class="btn btn-secondary">Annuler</button>
+
+</div>

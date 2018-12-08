@@ -1,0 +1,74 @@
+<!-- essai de acteur-->
+<div class="column1">
+	<!-- Place your name here: -->
+
+	<div> <img style="width: 50%;  height:50%; padding-left:40px;" [src]="getPath(auteur.profile_path)"></div>
+	<div style="padding-left:40px;">
+		<h4><b> Informations personnelles :</b></h4>
+		<h5>Connu pour :</h5><span>{{knownfordepart}}</span>
+		<h5>Le sexe :</h5><span>{{gender}}</span>
+		<h5>Date de naissance :</h5><span> {{birthday}}</span>
+		<h5>Lieu de naissance :</h5><span>{{palcebirthday}}</span>
+		<h5> Popularity :</h5> <span>{{auteurpopulation}}</span>
+	</div>
+</div>
+
+
+<div class="column2">
+	<div class="bio">
+		<!-- Write your own description of yourself here: -->
+		<h2> {{auteurName}}
+			<a href="{{homepage}}" onclick="window.open(this.href); return false;"><img width="50" height="50" src="/assets/images/icon.jpg"
+				 alt="auteur poster" /></a>
+		</h2><br />
+		<h3> Biographie </h3>
+		<h6>{{biography}} </h6>
+
+
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<!------ Include the above in your HEAD tag ---------->
+		<h1 class="text-center">Team Design Section with Pure CSS Effect</h1>
+
+		<h2>Connu par Les films : </h2>
+
+		<div class="container">
+
+			<div class="row">
+				<!-- test de tout les films-->
+
+				<div class="col-lg-4" *ngFor="let movie of movies.cast ;let i = index">
+
+					<section *ngIf="i < 3">
+
+						<div class="our-team-main">
+							<div class="team-front">
+								<img src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}" class="img-fluid" />
+
+								<h3>Titre du Film :</h3>
+								<p>{{movie.title}} </p>
+								<h3>A jouer le Role :</h3>
+								<p> {{movie.character}} </p>
+								<h3>Date de Realistaion :</h3>
+								<p>{{movie.release_date}} </p>
+							</div>
+
+							<div class="team-back">
+								<span>{{movie.overview}}
+								</span>
+							</div>
+
+						</div>
+					</section>
+
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+</div>

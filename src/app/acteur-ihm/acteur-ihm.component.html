@@ -1,0 +1,5 @@
+<mat-spinner *ngIf="showspinner"></mat-spinner>
+<mat-card class="card" *ngIf="person">
+  <a [routerLink]="['/acteurPage', personId]" routerLinkActive="active"> <img mat-card-image class="poster" [src]="getPath(person.profile_path)" alt="person profile" /> </a>
+  <mat-card-title class="title">{{personName}}</mat-card-title>
+</mat-card>

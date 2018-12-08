@@ -1,0 +1,35 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" [routerLink]="['/showFilm', 'popular']" routerLinkActive="active">Films
+      Populaires</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" [routerLink]="['/showFilm', 'topRated']" routerLinkActive="active">Films
+      Mieux Noté</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " [routerLink]="['/showFilm', 'comingsoon']" routerLinkActive="active">Prochainement</a>
+  </li>
+</ul>
+
+
+<ng-container *ngIf="getMode == 'topRated'">
+  <mat-toolbar>
+    <span>Films Mieux Noté</span>
+  </mat-toolbar>
+  <app-film-top-rated [listMovie] = "listMovie" [nbr]=40> </app-film-top-rated>
+</ng-container>
+
+<ng-container *ngIf="getMode == 'popular'">
+  <mat-toolbar>
+    <span>Films Populaires</span>
+  </mat-toolbar>
+  <app-film-page [listMovie] = "listMovie" [nbr]=50></app-film-page>
+</ng-container>
+
+<ng-container *ngIf="getMode == 'comingsoon'">
+  <mat-toolbar>
+    <span>Prochainement</span>
+  </mat-toolbar>
+  <app-film-coming-soon [listMovie] = "listMovie" [nbr]=40></app-film-coming-soon>
+</ng-container>

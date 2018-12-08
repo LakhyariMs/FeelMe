@@ -1,0 +1,64 @@
+<!--<h1>TMDB + Firebase</h1>
+<nav *ngIf="user">
+  <label>{{user.displayName}}</label>
+  <img [src]="user.photoURL" />
+  <button (click)="logout()">Déconnection</button>
+  {{user.uid}}
+</nav>
+<nav *ngIf="!user">
+  <button (click)="login()">Connection via Google</button>
+</nav>
+
+<hr/>
+<pre *ngIf="lists">
+  {{lists | async | json}}
+</pre>
+
+<hr/>
+<section *ngIf="movie">
+  <img [src]="getPath(movie.poster_path)" />
+  <pre>{{movie | json}}</pre>
+</section>
+<section *ngIf="!movie">
+  Pas encore de films à afficher...
+</section> -->
+
+<!-- <app-film-ihm [id]=21></app-film-ihm> -->
+
+
+
+<app-header-film></app-header-film>
+<router-outlet></router-outlet>
+
+
+
+
+<!-- <mat-grid-list cols="5" role="list">
+      <mat-grid-tile>
+          <app-acteur-ihm id=1 ></app-acteur-ihm>
+      </mat-grid-tile>
+      <mat-grid-tile>
+          <app-acteur-ihm id=2 ></app-acteur-ihm>
+      </mat-grid-tile>
+      <mat-grid-tile>
+          <app-acteur-ihm id=3 ></app-acteur-ihm>
+      </mat-grid-tile>
+      <mat-grid-tile>
+          <app-acteur-ihm id=4 ></app-acteur-ihm>
+      </mat-grid-tile>
+      <mat-grid-tile>
+          <app-acteur-ihm id=5 ></app-acteur-ihm>
+      </mat-grid-tile>
+  </mat-grid-list>
+
+
+<app-film-page mode='all' ></app-film-page> -->
+<!-- <mat-grid-list cols="1" rowHeight="1:2">
+
+  <mat-grid-tile>
+    <app-film-ihm [id]=21></app-film-ihm>
+  </mat-grid-tile>
+
+</mat-grid-list> -->
+
+<!-- <app-film-page [id]=1423> </app-film-page> -->

@@ -1,0 +1,48 @@
+<!-- <div class="header">
+	<mat-toolbar>
+		<mat-toolbar-row>
+			<a routerLink="/"><img src="assets/images/Image1.png" alt="logo" /></a>
+			<button mat-button [matMenuTriggerFor]="menu">FeelMe</button>
+			<mat-menu #menu="matMenu">
+				<button mat-menu-item [matMenuTriggerFor]="film">Films</button>
+				<button mat-menu-item routerLink="/acteur" routerLinkActive="active" >Acteurs</button>
+			</mat-menu>
+			<mat-menu #film="matMenu">
+				<button mat-menu-item [routerLink]="['/showFilm', 'topRated']" routerLinkActive="active"> Mieux noté</button>
+				<button mat-menu-item [routerLink]="['/showFilm', 'popular']" routerLinkActive="active">Populaire</button>
+				<button mat-menu-item [routerLink]="['/showFilm', 'comingsoon']" routerLinkActive="active" >Prochainement</button>
+			</mat-menu>
+			<button mat-button routerLink="/list">Mes listes</button>
+			<button mat-button routerLink="/contact" routerLinkActive="active"> Contact </button>
+		</mat-toolbar-row>
+	</mat-toolbar>
+</div> -->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">FeelMe</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Acceuil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/showFilm', 'popular']" routerLinkActive="active">Films</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/list">Mes listes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <app-search></app-search>
+    </form>
+  </div>
+</nav>

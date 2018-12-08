@@ -1,0 +1,22 @@
+<mat-toolbar>
+  <span>Mes Listes</span>
+</mat-toolbar>
+<form>
+  <div class="alert alert-dismissible alert-primary">
+    <div class="addList">
+      <input type="text" class="form-control" placeholder="Ajouter une nouvelle liste..." #item>
+      <a (click)="addList(item)"><img id="addBtn" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIsSURBVGhD7dnJLkRBFAbgjmlhZ1rhMQjvQUwPQjwA1khMjyAkYngP0wOYNqY1Nvx/ojcnf6s6XXULyf2TL+nEqVNXd7tVtzTq1KmTJZ0wActwANfwCh/f+PoK+DPWsLYDfj2jsAYP8Ol0Dxw7AsUzCLvwDuriPNhjC9izSObhBdTFpHgC9q4sPbAHavKctqEbsqYXzkBNWIVT4JxZwne+5MU3HUGWT6LE16YVfp2SsgCqcUkz0FaG4BlU05J4dxoAd/jxqYaxbFRNrE1whSts6iJlo2pi8VqGITpc4lUjDxtV47EKUeEmi/sU1cTDRtV43ELUBnASVAMvG1XjNQ7BcLurBnvZqBqvJQjmENRgLxtV47UPwfDBQw32slE1XpcQDJ+e1GArd9QcFhfWYGLv/7mj5rB4bcH8+1/g33+F+IeiBnvZqBqvCwiGRx9qsJeNqvGKuo3+5YVsEYLhoZMa7GWjarzGIBhumO5ANfCwUTUe0Zs5hltX1cTDRtV4rEB0eNwXux60YqNqYr2B64GG4XGfahbLRtXE2gB3+CD9Fx7qH6Ef2socqKYlTUNSdkA1LmEdksOjRR7zqQmqxDn5j5Ms4UHrCaiJqnAM2Q53m+FBa+phVwzecbqgsswCj/vU5CnYcwqKhLdYHvelLnbERYrveh8UD1dsbjtuQF3cTziG2wP3CltFuMnioRPPbbhn54MH/4/GT4j4+hz4M26JuauM3pjVqVOnVRqNL4NLUu1sR/03AAAAAElFTkSuQmCC">
+      </a>
+    </div>
+  </div>
+
+
+  <div *ngIf="getlist">
+    <div *ngFor="let list of getlist">
+      <div class="alert alert-dismissible alert-secondary">
+        <a [routerLink]="['/listFilm', list.$key ,list.content] " routerLinkActive="active">
+          {{ list.content}}
+        </a>
+      </div>
+    </div>
+  </div>

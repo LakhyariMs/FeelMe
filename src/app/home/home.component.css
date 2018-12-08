@@ -1,0 +1,17 @@
+.containerslider-top-text{
+  height: 30%;
+  margin-top: 65px;
+  margin-bottom: 40px;
+  background-image: url("/assets/images/bcz7AH.jpg");
+  color: whitesmoke;
+  max-width: 100%;
+}
+
+h3{
+  margin-top: 30px;
+}
+
+.title {
+ margin-left: 45%;
+ font-size: 20px;
+}

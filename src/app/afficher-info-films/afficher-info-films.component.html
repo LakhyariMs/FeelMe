@@ -1,0 +1,69 @@
+<section class="all">
+  <section>
+    <p class="title">{{MovieName}}</p>
+  </section>
+
+  <section fxflex fxlayout style="flex: 1; place-content: flex-start space-around ;flex-direction: row; display: flex;">
+    <section>
+      <img [src]="getPath(MovieCheminAffiche)" (click)="info=!info" class="block_position_one" />
+    </section>
+    <section class="position">
+      <div class="action">
+        <div class="cercle">
+          <circle-progress [percent]="MovieNote" [radius]="50" [responsive]="false" [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8" [outerStrokeColor]="'#3D5AFE'" [innerStrokeColor]="'#8C9EFF'" [animation]="true"
+            [animationDuration]="300" [subtitleFontSize]="10"></circle-progress>
+        </div>
+        <div>
+          <div *ngIf="aime">
+            <button mat-fab color="warn" class="material-button">
+              <i class="material-icons" (click)="aime=!aime">favorite_border </i>
+            </button>
+          </div>
+          <div *ngIf="!aime">
+            <button mat-fab color="Primary" class="material-button">
+              <i class="material-icons" (click)="aime=!aime">favorite </i>
+            </button>
+          </div>
+        </div>
+        <div>
+          <button mat-fab color="Primary">
+            <i class="material-icons">share </i>
+          </button>
+        </div>
+        <div>
+          <button mat-fab color="primary" [matMenuTriggerFor]="menu">
+            <i class="material-icons">add </i>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="listExiste">Liste déjà existant</button>
+            <button mat-menu-item [matMenuTriggerFor]="newListe">Nouvelle liste</button>
+          </mat-menu>
+
+          <mat-menu #listExiste="matMenu">
+            <div *ngFor="let listName of getlist" #addHer>
+              <button mat-menu-item (click)="addToList(listName.$key)">{{listName.content}}</button>
+            </div>
+          </mat-menu>
+          <mat-menu #newListe="matMenu">
+
+            <input mat-menu-item mdInput placeholder="Create new" value="" class="mx-4" [(ngModel)]="itemValue" name="item"
+              placeholder="Ajouter une nouvelle liste..." (click)="onSubmit()" onsubmit="addList(itemValue)">
+          </mat-menu>
+        </div>
+      </div>
+
+      <div title="Résumé" width="10px" class="block_position_two">
+        <h5 class="taille">Résumé du film</h5>
+        <p>{{MovieResume}}</p>
+      </div>
+    </section>
+
+  </section>
+
+</section>
+<mat-toolbar style="margin-top: 40px;">
+  <span class="simiFilm">Films Similaires</span>
+</mat-toolbar>
+
+<app-film-similar id={{MovieId}}></app-film-similar>

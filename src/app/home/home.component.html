@@ -1,0 +1,31 @@
+<div class="containerslider-top-text">
+  <div class="container slider-top-text">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <section id="sectionClass">
+          <h3 class="my-heading">WELCOME To FeeLMe</h3>
+          <p class="myp-slider text-center">OU VOUS POUVEZ TROUVEZ TOUS VOS FILMS PREFERER</p>
+          <p class="myp text-center">CREEZ VOTRE LISTE  |   PARTAGER AVEC VOS AMIS   |   RENSEIGNEZ SUR LES</p>
+          <a class="btn btn-primary btn-join" href="#">REJOIGNEZ LA COMMUNAUTÉ</a>
+        </section>
+      </div>
+      <div class="col-md-12 text-center mt-5">
+        <div class="scroll-down">
+          <a class="btn btn-default btn-scroll floating-arrow" href="#gobottom" id="bottom"><i class="fa fa-angle-down"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<mat-toolbar *ngIf="error">
+  <span  class="title">Films Tendances</span>
+</mat-toolbar>
+<mat-divider *ngIf="error"></mat-divider>
+<app-film-page [listMovie] = "listMovie" [nbr]=nbr></app-film-page>
+
+<mat-toolbar *ngIf="error">
+  <span class="title">Films Mieux Notee</span>
+</mat-toolbar>
+<mat-divider *ngIf="error"></mat-divider>
+<app-film-top-rated *ngIf="error" [nbr]=nbr> </app-film-top-rated>

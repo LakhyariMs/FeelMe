@@ -1,0 +1,12 @@
+<form (ngSubmit)="search(searchMovieQuery)">
+  <input *ngIf="checked == true && typeSearch=='film'" class="form-control" style="float: left ; width: 135px ; margin-right: 3px;" type="text" placeholder="Region (ex: US)" name="region" [(ngModel)]="searchMovieQuery.region" [disabled]="searchMovieQuery.query == '' || searchMovieQuery.query == undefined">
+  <input *ngIf="checked == true && typeSearch=='film'" class="form-control" style="float: left ; width: 135px ; margin-right: 3px;" type="text" placeholder="Langue (ex: en-US)" name="langue" [(ngModel)]="searchMovieQuery.language" [disabled]="searchMovieQuery.query == '' || searchMovieQuery.query == undefined">
+  <input *ngIf="checked == true && typeSearch=='film'" class="form-control" style="float: left ; width: 100px ; margin-right: 3px;" type="number" placeholder="Pr Version Sortie" name="pvs" [(ngModel)]="searchMovieQuery.primary_release_year" [disabled]="searchMovieQuery.query == '' || searchMovieQuery.query == undefined">
+  <input *ngIf="checked == true && typeSearch=='film'" class="form-control" style="float: left ; width: 100px" type="number" placeholder="Année" name="annee" [(ngModel)]="searchMovieQuery.year" [disabled]="searchMovieQuery.query == '' || searchMovieQuery.query == undefined">
+    <mat-checkbox (click)="showSearchAdvance()" *ngIf="typeSearch=='film'" [(ngModel)]="checked" name="checkbox"></mat-checkbox>
+    <label >Rech.Avancée &nbsp;</label>
+  <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search" [(ngModel)]="searchMovieQuery.query">
+  <button class="btn btn-secondary my-2 my-sm-0" type="submit" (click)="search(searchMovieQuery)">Search</button>
+
+</form>
+

@@ -1,0 +1,48 @@
+
+* {
+    box-sizing: border-box;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 50%;
+    background: #f1f1f1;
+    margin-top: 30px;
+    margin-left: 20%;
+    margin-bottom: 30px;
+}
+
+form.example button {
+    float: left;
+    height: 42px;
+    width: 10%;
+    padding: 10px;
+    background: #283593;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+form mat-checkbox{
+  float: left;
+  padding: 3px;
+  color: azure;
+}
+.mat-checkbox-frame {
+  border-color: azure;
+}
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}

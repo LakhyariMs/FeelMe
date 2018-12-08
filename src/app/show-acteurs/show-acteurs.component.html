@@ -1,0 +1,15 @@
+<app-search></app-search>
+<ng-container>
+    <mat-toolbar>
+        <span>Acteurs Populaires</span>
+    </mat-toolbar>
+
+
+    <mat-grid-list cols="5" rowHeight=450 px>
+        <div *ngFor="let movie of getPerson">
+            <mat-grid-tile>
+                <app-acteur-ihm id={{movie.id}}> </app-acteur-ihm>
+            </mat-grid-tile>
+        </div>
+    </mat-grid-list>
+</ng-container>

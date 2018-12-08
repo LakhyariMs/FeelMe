@@ -1,0 +1,66 @@
+
+.all{
+  margin-left: 12%;
+}
+.action {
+  flex-direction: row;
+  display: flex;
+  align-content: space-between;
+}
+
+.action > div {
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.cercle{
+  width: 200px;
+}
+.material-icons.md-96 { font-size: 96px; }
+
+.block_circle{
+  margin-left: 175px;
+}
+
+.buttonHeart{
+  margin-left: 100px;
+  margin-top: 150px;
+  font-size: 75px;
+}
+.block_position_one{
+  width:400px;
+  height:600px;
+  margin-left: 50px;
+}
+.block_position_two{
+  width:40%;
+  margin-left: 120px;
+  margin-top: 15px;
+}
+.block_position_two p {
+  width: 180%;
+}
+
+.position{
+  margin-left: 20px;
+
+}
+
+.taille{
+  font-size:20px;
+}
+
+.title{
+  font-size: 40px;
+  font-weight:bold;
+  text-decoration: underline;
+  margin-left: 50px;
+  margin: 30px;
+}
+.simiFilm {
+  margin-left: 45%;
+ font-size: 20px;
+}
+
+
