@@ -55,6 +55,7 @@ import { DialogRemoveComponent } from './dialog-remove/dialog-remove.component';
 import {MatExpansionModule} from '@angular/material';
 import {DataService} from './DataService';
 
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -105,6 +106,7 @@ import {DataService} from './DataService';
     MatIconModule,
     MatRadioModule,
     MatSlideToggleModule,
+    MatSnackBarModule,
     NgCircleProgressModule.forRoot({
       // set defaults here
       radius: 100,

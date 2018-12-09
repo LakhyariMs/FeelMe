@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { MovieResponse } from '../tmdb-data/Movie';
 import { ListService } from '../list.service';
 
+import { SimpleSnackBar, MatSnackBarRef } from '@angular/material';
+import {MatSnackBar} from '@angular/material';
 
 
 @Component({
@@ -19,7 +21,7 @@ export class FilmIHMComponent implements OnInit {
   @Input() keylist: string;
   @Input() key: string;
   @Input() inlist = false ;
-  constructor(private tmdb: TmdbService, private fireService: ListService) {
+  constructor(private tmdb: TmdbService, private fireService: ListService,public snackBar: MatSnackBar) {
     setTimeout(() =>
       tmdb.init('6038eeec002660fd69b5e12765e35df3') // Clef de TMDB
         .getMovie(this.id)
@@ -101,11 +103,11 @@ export class FilmIHMComponent implements OnInit {
         if(listmovie[i].id===this._movie.id) {j=j+1;   }  
       }
 
-      if(j===1 && nbr===1){alert("Ce film existe déja dans cette liste !!!"); }
+      if(j===1 && nbr===1){ this.snackBar.open('Ce film existe déja dans cette liste !!!', 'Fermer', { duration: 3000 }); }
       else if(j===0 && nbr===1) {  let img:string;
         img=`https://image.tmdb.org/t/p/w500${this._movie.poster_path}`;
           this.fireService.testaddmovie2(key,this._movie.id, this._movie.original_title,this._movie.release_date,img);      
-          alert("Ce film est bien ajouté dans cette liste !!!");
+          this.snackBar.open('Ce film est bien ajouté dans cette liste !!!', 'Fermer', { duration: 3000 });
       j=j+1;  }
       
     }) 
