@@ -6,11 +6,12 @@
       <div class="wrapper">
       <div class="data">
         <div class="content">
-          <h1 class="title"><a href="#">{{MovieName}}</a></h1>
+          <h1 class="title"><a [routerLink]="['/informationFilm' , movie.id]" routerLinkActive="active">{{MovieName}}</a></h1>
           <p class="text">{{MovieOverView}}</p>
           <label  class="menu-button" [matMenuTriggerFor]="menu" ><span></span></label>
         </div>
         <mat-menu #menu="matMenu">
+            <button mat-menu-item [routerLink]="['/informationFilm' , movie.id]" routerLinkActive="active">Plus de détails</button>
           <button mat-menu-item [matMenuTriggerFor]="listExist">Listes qui existent deja</button>
           <button mat-menu-item [matMenuTriggerFor]="AddList">Ajouter une Liste</button>
         </mat-menu>
