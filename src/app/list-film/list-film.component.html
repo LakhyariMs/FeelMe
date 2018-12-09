@@ -19,8 +19,9 @@
 
 <mat-grid-list cols="5" rowHeight=550 px>
   <div *ngFor="let list of getlistMovies ">
-    <mat-grid-tile>
-      <app-film-ihm id={{list.id}} inlist=true></app-film-ihm>
+     <mat-grid-tile>
+      <app-film-ihm id={{list.id}} inlist=true key={{list.$key}} keylist={{getClelist}}>
+      </app-film-ihm>
     </mat-grid-tile>
   </div>
 </mat-grid-list>

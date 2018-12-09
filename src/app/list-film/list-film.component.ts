@@ -34,7 +34,7 @@ export class ListFilmComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router, private listFilmService: ListFilmService, private route: ActivatedRoute,
     private fireSevc: ListService, private dialog: MatDialog, private dialogRemove: MatDialog) {
-
+    
   }
 
   ngOnInit() {
@@ -48,6 +48,8 @@ export class ListFilmComponent implements OnInit, OnDestroy {
   });
 
   this.fireSevc.getAllMovieOfList(this.listeCle).snapshotChanges().subscribe(lists => {
+    
+    this.listMovies=[];
     lists.forEach(list => {
       const x = list.payload.toJSON();
       x['$key'] = list.key;
@@ -73,6 +75,10 @@ export class ListFilmComponent implements OnInit, OnDestroy {
    // return this.listeCle;
    return this.listeName;
   }
+  get getClelist(){
+    return this.listeCle;
+  }
+
 
   onDelete() {
     this.fireSevc.removeMovieList(this.listeCle);
@@ -115,9 +121,13 @@ export class ListFilmComponent implements OnInit, OnDestroy {
     this.DialogRemoveRef = this.dialogRemove.open(DialogRemoveComponent, { data: {cle: this.listeCle}});
 
   }
+ 
 
-
-
+//supprimer un film dans une list
+removemovie(key:string){
+  this.listMovies=[]; 
+  this.fireSevc.removeMovieFromList(key,this.listeCle);
+}
 
 
 

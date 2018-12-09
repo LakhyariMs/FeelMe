@@ -51,4 +51,14 @@ export class ListService {
 
     return this.listMovie;
    }
+
+   //supprimer un film dans une list
+ removeMovieFromList(key:string,keylist:string)
+ {
+   console.log("list.service key:"+key+" keylist: "+keylist);
+   this.db.list('items/'+keylist+'/movie/'+key).remove();
+  }
+
+
+
 }

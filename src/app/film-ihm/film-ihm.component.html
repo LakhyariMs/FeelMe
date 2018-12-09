@@ -17,7 +17,7 @@
 
         <mat-menu #listExist="matMenu">
           <div *ngFor="let listName of getListName" #addHere>
-            <button mat-menu-item (click)="addToList(listName.$key)" > {{ listName.content}}  </button>
+            <button mat-menu-item (click)="ifexiste(listName.$key)" > {{ listName.content}}  </button>
           </div>
         </mat-menu>
 
@@ -34,5 +34,5 @@
         </a>
       </div>
     </div>
-    <button *ngIf="inlist" type="button" class="btn btn-danger" style="width:180%; text-align: center ;">Supprimer</button>
-  </div>
+     <button *ngIf="inlist" type="button" class="btn btn-danger" style="width:180%; text-align: center ;" (click)="removemovie()">Supprimer</button>
+    </div>
