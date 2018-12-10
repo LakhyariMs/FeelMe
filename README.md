@@ -15,11 +15,17 @@ Parties prévues fonctionnelles :
  - Filtrage recherche, 
  - Ajout des films dans des listes.
   
-Parties prévues non fonctionnelles :
+Parties prévues non fonctionnelles (Non declarer dans le dossier de conception ) :
  - Connexion des utilisateurs, 
  - Partage de listes
+ 
+## Groupe Members
+ - Lakhyari M'ed Said
+ - Samya Anzid
+ - Guevara Thomas
+ - Benbrahim Yassine
   
-## The ptoject 
+## The project 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
