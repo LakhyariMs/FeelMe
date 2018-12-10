@@ -5,7 +5,7 @@ site disponible à l'adresse: https://feelmeapp.firebaseapp.com/
 
 Ce projet est la V2 pour créer une bibliothèque de film.
 
-#Parties prévues fonctionnelles : 
+Parties prévues fonctionnelles : 
   affichage des films, 
   affichage des acteurs (biographie , filmographie), 
   affichage des films tendances, 
@@ -15,7 +15,7 @@ Ce projet est la V2 pour créer une bibliothèque de film.
   filtrage recherche, 
   ajout des films dans des listes.
   
-#Parties prévues non fonctionnelles :
+Parties prévues non fonctionnelles :
   Connexion des utilisateurs, 
   Partage de listes
   
