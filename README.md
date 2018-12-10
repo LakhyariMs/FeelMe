@@ -1,4 +1,25 @@
-# TmdbM1
+# FeelMe App
+
+Présentation projet : 
+site disponible à l'adresse: https://feelmeapp.firebaseapp.com/
+
+Ce projet est la V2 pour créer une bibliothèque de film.
+
+#Parties prévues fonctionnelles : 
+  affichage des films, 
+  affichage des acteurs (biographie , filmographie), 
+  affichage des films tendances, 
+  affichage des films mieux notés, 
+  affichages des films a venir.
+  barre de recherche, 
+  filtrage recherche, 
+  ajout des films dans des listes.
+  
+#Parties prévues non fonctionnelles :
+  Connexion des utilisateurs, 
+  Partage de listes
+  
+## The ptoject 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
